@@ -9643,7 +9643,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM'}, 
+{text = ' ✗𝑺𝑴𝑺𝑴 𝑺𝑶𝑼𝑹𝑪𝑬✗' , url = ' t.me/C_SMSM '}, 
 },
 }
 }
@@ -11248,7 +11248,7 @@ data = {
 {text = 'القفل والفتح🔓', data = msg.sender.user_id..'/NoNextSeting'}, {text = 'التفعيل والتعطيل📵', data = msg.sender.user_id..'/listallAddorrem'}, 
 },
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM'}, 
+{text = ' ✗𝑺𝑴𝑺𝑴 𝑺𝑶𝑼𝑹𝑪𝑬✗' , url = ' t.me/C_SMSM '}, 
 },
 }
 }
@@ -11277,7 +11277,7 @@ data = {
 {text = 'العاب متطورة 🥏', data = msg.sender.user_id..'/degm'}, 
 },
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM'}, 
+{text = ' ✗𝑺𝑴𝑺𝑴 𝑺𝑶𝑼𝑹𝑪𝑬✗' , url = ' t.me/C_SMSM '}, 
 },
 }
 }
@@ -12632,7 +12632,7 @@ if photo.total_count > 0 then
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM'}, 
+{text = ' ✗𝑺𝑴𝑺𝑴 𝑺𝑶𝑼𝑹𝑪𝑬✗' , url = ' t.me/C_SMSM '}, 
 },
 {
 {text = 'مٓطۄࢪ آلبۄت🌐', url = "https://t.me/"..bb.username..""},
@@ -12649,7 +12649,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM'}, 
+{text = ' ✗𝑺𝑴𝑺𝑴 𝑺𝑶𝑼𝑹𝑪𝑬✗' , url = ' t.me/C_SMSM '}, 
 },
 {
 {text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
@@ -14289,7 +14289,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM''}, 
+{text = ' ✗𝑺𝑴𝑺𝑴 𝑺𝑶𝑼𝑹𝑪𝑬✗' , url = ' t.me/C_SMSM '}, 
 },
 }
 }
@@ -14338,7 +14338,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM''}, 
+{text = ' ✗𝑺𝑴𝑺𝑴 𝑺𝑶𝑼𝑹𝑪𝑬✗' , url = ' t.me/C_SMSM '}, 
 },
 }
 }
@@ -14401,7 +14401,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM''}, 
+{text = ' ✗𝑺𝑴𝑺𝑴 𝑺𝑶𝑼𝑹𝑪𝑬✗' , url = ' t.me/C_SMSM '}, 
 },
 }
 }
@@ -14443,7 +14443,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM''}, 
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url ='t.me/SOURCE_ELNGOM'}, 
 },
 }
 }
@@ -14498,7 +14498,7 @@ data = {
 {text = 'العاب متطورة 🥏', data = IdUser..'/degm'}, 
 },
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM''}, 
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url ='t.me/SOURCE_ELNGOM'}, 
 },
 }
 }
@@ -14558,7 +14558,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/help6'},
 },
 {
-{text = '<𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠 >', url = 't.me/SOURCE_ELNGOM''}, 
+{text = '<𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠 >', url ='t.me/SOURCE_ELNGOM'}, 
 },
 }
 }
@@ -14598,7 +14598,7 @@ data = {
 {text = 'القفل والفتح🔓', data = IdUser..'/NoNextSeting'}, {text = 'التفعيل والتعطيل📵', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM'}, 
+{text = ' ✗𝑺𝑴𝑺𝑴 𝑺𝑶𝑼𝑹𝑪𝑬✗' , url = ' t.me/C_SMSM' }, 
 },
 }
 }
