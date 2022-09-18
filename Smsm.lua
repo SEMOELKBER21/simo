@@ -9643,7 +9643,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM}, 
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM'}, 
 },
 }
 }
@@ -11248,7 +11248,7 @@ data = {
 {text = 'القفل والفتح🔓', data = msg.sender.user_id..'/NoNextSeting'}, {text = 'التفعيل والتعطيل📵', data = msg.sender.user_id..'/listallAddorrem'}, 
 },
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM}, 
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM'}, 
 },
 }
 }
@@ -11277,7 +11277,7 @@ data = {
 {text = 'العاب متطورة 🥏', data = msg.sender.user_id..'/degm'}, 
 },
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM}, 
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM'}, 
 },
 }
 }
@@ -12632,7 +12632,7 @@ if photo.total_count > 0 then
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM}, 
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM'}, 
 },
 {
 {text = 'مٓطۄࢪ آلبۄت🌐', url = "https://t.me/"..bb.username..""},
@@ -12649,7 +12649,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM}, 
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM'}, 
 },
 {
 {text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
@@ -14289,7 +14289,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM}, 
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM''}, 
 },
 }
 }
@@ -14338,7 +14338,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM}, 
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM''}, 
 },
 }
 }
@@ -14401,7 +14401,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM'}, 
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM''}, 
 },
 }
 }
@@ -14443,7 +14443,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM'}, 
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM''}, 
 },
 }
 }
@@ -14498,7 +14498,7 @@ data = {
 {text = 'العاب متطورة 🥏', data = IdUser..'/degm'}, 
 },
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM'}, 
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM''}, 
 },
 }
 }
@@ -14538,7 +14538,7 @@ data = {
 {{text = 'SpaceTraveler', url="https://t.me/gamee?game=SpaceTraveler"},{text = 'RedAndBlue', url="https://t.me/gamee?game=RedAndBlue"}},  
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
-{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM}},
+{{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM'}},
 {{text = 'القائمه الرئيسيه', data = IdUser..'/help6'}},
 }
 }
@@ -14558,7 +14558,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/help6'},
 },
 {
-{text = '<𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠 >', url = 't.me/SOURCE_ELNGOM'}, 
+{text = '<𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠 >', url = 't.me/SOURCE_ELNGOM''}, 
 },
 }
 }
@@ -14598,7 +14598,7 @@ data = {
 {text = 'القفل والفتح🔓', data = IdUser..'/NoNextSeting'}, {text = 'التفعيل والتعطيل📵', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM}, 
+{text = '𝗦𝗢𝗨𝗥𝗖𝗘 𝗘𝗜𝗡𝗚𝗢𝗢𝗠', url = 't.me/SOURCE_ELNGOM'}, 
 },
 }
 }
@@ -16502,84 +16502,84 @@ elseif Text and Text:match('(%d+)/Delkholat') then
 local UserId = Text:match('(%d+)/Delkholat')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:del(semo.."kholat:Group"..ChatId) 
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM},},}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM'},},}}
 LuaTele.editMessageText(ChatId,Msg_id,"❏ تم مسح جميع خولات المجموعة", 'md', false)
 end
 elseif Text and Text:match('(%d+)/Delwtk') then
 local UserId = Text:match('(%d+)/Delwtk')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:del(semo.."wtka:Group"..ChatId) 
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM},},}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM'},},}}
 LuaTele.editMessageText(ChatId,Msg_id,"❏ تم مسح جميع وتكات المجموعة", 'md', false)
 end
 elseif Text and Text:match('(%d+)/Deltwhd') then
 local UserId = Text:match('(%d+)/Deltwhd')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:del(semo.."twhd:Group"..ChatId) 
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM},},}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM'},},}}
 LuaTele.editMessageText(ChatId,Msg_id,"❏ تم مسح جميع متوحدين المجموعة", 'md', false)
 end
 elseif Text and Text:match('(%d+)/Delklb') then
 local UserId = Text:match('(%d+)/Delklb')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:del(semo.."klb:Group"..ChatId) 
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM},},}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM'},},}}
 LuaTele.editMessageText(ChatId,Msg_id,"❏ تم مسح جميع الكلاب المجموعة", 'md', false)
 end
 elseif Text and Text:match('(%d+)/Delmar') then
 local UserId = Text:match('(%d+)/Delmar')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:del(semo.."mar:Group"..ChatId) 
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM},},}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM'},},}}
 LuaTele.editMessageText(ChatId,Msg_id,"❏ تم مسح جميع حمير المجموعة", 'md', false)
 end
 elseif Text and Text:match('(%d+)/Delsmb') then
 local UserId = Text:match('(%d+)/Delsmb')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:del(semo.."smb:Group"..ChatId) 
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM},},}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM'},},}}
 LuaTele.editMessageText(ChatId,Msg_id,"❏ تم مسح جميع السمب الي هنا ف المجموعة", 'md', false)
 end
 elseif Text and Text:match('(%d+)/Del2rd') then
 local UserId = Text:match('(%d+)/Del2rd')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:del(semo.."2rd:Group"..ChatId) 
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM},},}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM'},},}}
 LuaTele.editMessageText(ChatId,Msg_id,"❏ تم مسح جميع القرود", 'md', false)
 end
 elseif Text and Text:match('(%d+)/Del3ra') then
 local UserId = Text:match('(%d+)/Del3ra')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:del(semo.."3ra:Group"..ChatId) 
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM},},}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM'},},}}
 LuaTele.editMessageText(ChatId,Msg_id,"❏ تم مسح جميع العرر", 'md', false)
 end
 elseif Text and Text:match('(%d+)/alpe:Group') then
 local UserId = Text:match('(%d+)/alpe:Group')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:del(semo.."alpe:Group"..ChatId) 
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM},},}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM'},},}}
 LuaTele.editMessageText(ChatId,Msg_id,"❏ تم مسح جميع القلوب", 'md', false)
 end
 elseif Text and Text:match('(%d+)/bwoman:Group') then
 local UserId = Text:match('(%d+)/bwoman:Group')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:del(semo.."bwoman:Group"..ChatId) 
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM},},}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM'},},}}
 LuaTele.editMessageText(ChatId,Msg_id,"❏ تم مسح جميع بناتك", 'md', false)
 end
 elseif Text and Text:match('(%d+)/botaua:Group') then
 local UserId = Text:match('(%d+)/botaua:Group')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:del(semo.."botaua:Group"..ChatId) 
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM},},}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM'},},}}
 LuaTele.editMessageText(ChatId,Msg_id,"❏ تم مسح جميع ولادك", 'md', false)
 end
 elseif Text and Text:match('(%d+)/Del8by') then
 local UserId = Text:match('(%d+)/Del8by')
 if tonumber(IdUser) == tonumber(UserId) then
 Redis:del(semo.."8by:Group"..ChatId) 
-local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM},},}}
+local reply_markup = LuaTele.replyMarkup{type = 'inline',data = {{{text = '•ᴍʏ ᴄʜᴀɴɴᴇʟ♪', url = 't.me/SOURCE_ELNGOM'},},}}
 LuaTele.editMessageText(ChatId,Msg_id,"❏ تم مسح جميع الأغبياء", 'md', false)
 end
 elseif Text and Text:match('(%d+)/SilentGroupGroup') then
