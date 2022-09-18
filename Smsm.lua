@@ -12604,10 +12604,10 @@ LuaTele.sendText(msg_chat_id,msg_id, "✶  تم تحديث الملفات ♻","
 dofile('Smsm.lua')  
 end
 if text == '/start' then
-Redis:sadd(black..'Num:User:Pv',msg.sender_id.user_id)  
+Redis:sadd(Smsm..'Num:User:Pv',msg.sender_id.user_id)  
 if not msg.Thanway then
 local photo = LuaTele.getUserProfilePhotos(Smsm)
-if not Redis:get(black.."Start:Bot") then
+if not Redis:get(Smsm.."Start:Bot") then
 local CmdStart = '*\n❍ أهلآ بك في بوت '..(Redis:get(Smsm.."Name:Bot") or "نجوم")..
 '\n❍ اختصاص البوت حماية المجموعات'..
 '\n❍ لتفعيل البوت عليك اتباع مايلي ...'..
@@ -12639,7 +12639,7 @@ data = {
 },
 }
 }
-LuaTele.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id,Redis:get(black.."Start:Bot"),"md", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
+LuaTele.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id,Redis:get(Smsm.."Start:Bot"),"md", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
 end
 else
 local reply_markup = LuaTele.replyMarkup{type = 'keyboard',resize = true,is_personal = true,
