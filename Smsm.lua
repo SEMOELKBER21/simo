@@ -12604,42 +12604,60 @@ LuaTele.sendText(msg_chat_id,msg_id, "✶  تم تحديث الملفات ♻","
 dofile('Smsm.lua')  
 end
 if text == '/start' then
-Redis:sadd(Smsm..'Num:User:Pv',msg.sender_id.user_id)  
-if not msg.Thanway then
 local photo = LuaTele.getUserProfilePhotos(Smsm)
+local ban = LuaTele.getUser(Smsm)
+local  bb = LuaTele.getUser(Sudo_Id) 
+local bain = LuaTele.getUser(msg.sender.user_id)
+Redis:sadd(Smsm..'Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
 if not Redis:get(Smsm.."Start:Bot") then
-local CmdStart = '*\n❍ أهلآ بك في بوت '..(Redis:get(Smsm.."Name:Bot") or "نجوم")..
-'\n❍ اختصاص البوت حماية المجموعات'..
-'\n❍ لتفعيل البوت عليك اتباع مايلي ...'..
-'\n❍ اضف البوت الى مجموعتك'..
-'\n❍ ارفعه ادمن مشرف'..
-'\n❍ ارسل كلمة { تفعيل } ليتم تفعيل الجروب'..
-'\n❍ مطور البوت ➢ {'..UserSudo..'}*'
-local reply_markup = LuaTele.replyMarkup{
-type = 'inline',
-data = {
+if bain.username then
+banusername = '[@'..bain.username..']'
+else
+banusername = 'لا يوجد'
+end
+if bain.first_name then
+baniusername = '*['..bain.first_name..'](tg://user?id='..bain.id..')*'
+else
+baniusername = 'لا يوجد'
+end
+local CmdStart = '*\n🍷ــــــــــــــــــــــــــــــــــــــــــــــــــــــ🍷\n🎤╖ اهلا بك عزيزي انا بوت '..(Redis:get(Smsm.."Name:Bot") or "سمسم")..
+'\n⚙️╢ وظيفتي حماية المجموعات'..
+'\n✅╢ لتفعيل البوت عليك اتباع مايلي ...'..
+'\n🔘╢ أضِف البوت إلى مجموعتك'..
+'\n⚡️╢ ارفعهُ » مشرف'..
+'\n⬆️╜ سيتم ترقيتك مالك في البوت '..
+'\n🍷ــــــــــــــــــــــــــــــــــــــــــــــــــــــ🍷 \n*'
+if photo.total_count > 0 then
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = '✗𝑺𝑴𝑺𝑴 𝑺𝑶𝑼𝑹𝑪𝑬✗', url = 't.me/C_SMSM'}, 
+},
+{
+{text = 'مٓطۄࢪ آلبۄت🌐', url = "https://t.me/"..bb.username..""},
+},
 {
 {text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
-{
-{text = '❍ ⋆᥉᥆υᖇᥴᥱ ᥱᥣꪀᘜ᥆᥆ꪔ ❍️', url = 't.me/'..chsource..''}, 
-},
 }
-}
-LuaTele.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id,CmdStart,"md", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
+local msgg = msg_id/2097152/0.5
+https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo="..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id.."&caption=".. URL.escape(CmdStart).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+LuaTele.sendText(Sudo_Id,0,'*\n✶ دخل شخص إلى البوت \n⩹━✗𝑺𝑴𝑺𝑴 𝑺𝑶𝑼𝑹𝑪𝑬✗━⩺\n✶ اسمه :- '..baniusername..' \n✶ ايديه :-  : '..msg.sender.user_id..'\n✶ - معرفة '..banusername..' \n*',"md")
 else
 local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
+{text = '✗𝑺𝑴𝑺𝑴 𝑺𝑶𝑼𝑹𝑪𝑬✗', url = 't.me/C_SMSM'}, 
 },
 {
-{text = '❍ ⋆᥉᥆υᖇᥴᥱ ᥱᥣꪀᘜ᥆᥆ꪔ ❍️', url = 't.me/'..chsource..''}, 
+{text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 }
 }
-LuaTele.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id,Redis:get(Smsm.."Start:Bot"),"md", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
+return LuaTele.sendText(msg_chat_id,msg_id,Redis:get(Smsm.."Start:Bot"),"md",false, false, false, false, reply_markup)
+end
 end
 else
 local reply_markup = LuaTele.replyMarkup{type = 'keyboard',resize = true,is_personal = true,
