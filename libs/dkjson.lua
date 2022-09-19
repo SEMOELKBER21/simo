@@ -498,7 +498,7 @@ end
 
 local function scanwhite (str, pos)
   while true do
-    pos = strfind (str, "%S", pos)
+ pos = strfind (str, "%S", pos)
     if not pos then return nil end
     if strsub (str, pos, pos + 2) == "\239\187\191" then
       -- UTF-8 Byte Order Mark
