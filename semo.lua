@@ -7482,7 +7482,6 @@ bot.sendText(msg.chat_id,msg.id,[[
 ]],"md",true)  
 return false
 end
-
 if text ==  انشاء حساب بنكي  or text ==  انشاء حساب البنكي  or text == انشاء الحساب بنكي  or text == انشاء الحساب البنكي  or text == "انشاء حساب" or text == "فتح حساب بنكي" then
 cobnum = tonumber(Redis:get("bandid"..msg.sender_id.user_id))
 if cobnum == msg.sender_id.user_id then
