@@ -13290,7 +13290,7 @@ os.remove("intk"..rand..".mp3")
 end
 end
 --------بدايه البنك 
-if text ==  انشاء حساب بنكي  or text ==  انشاء حساب البنكي  or text == انشاء الحساب بنكي  or text == انشاء الحساب البنكي  then
+if text =  انشاء حساب بنكي  or text ==  انشاء حساب البنكي  or text == انشاء الحساب بنكي  or text == انشاء الحساب البنكي  then
 creditcc = tonumber(math.random(500000000,5999999999999))
 creditvi = tonumber(math.random(40000000000,4999999999999))
 creditex = tonumber(math.random(6000000000,69999999999999))
