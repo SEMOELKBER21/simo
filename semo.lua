@@ -5803,20 +5803,19 @@ end
 LuaTele.setChatMemberStatus(msg.chat_id,bana.id,'restricted',{1,1,1,1,1,1,1,1})
 return LuaTele.sendText(msg_chat_id,msg_id,Reply_Status(bana.id,"⋆ تم الغاء تقييده من الجروب").Reply,"md",true)  
 end
-
-if text == "معلوماتي" and not database:get(bot_id..'Bot:Id'..msg.chat_id_) then
+if text == "معلوماتي" and not bot_data:get(ban_id..'Bot:Id'..msg.chat_id_) then
 tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data)
 local rtp = Rutba(msg.sender_user_id_,msg.chat_id_)
-local Msguser = tonumber(database:get(bot_id..'Msg_User'..msg.chat_id_..':'..msg.sender_user_id_) or 1) 
+local Msguser = tonumber(bot_data:get(ban_id..'Msg_User'..msg.chat_id_..':'..msg.sender_user_id_) or 1)
 local msg_id = msg.id_/2097152/0.5
 local Text = "معلوماتك"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = 'معرفك '..data.username_,url="t"}},
-{{text = 'رتبتك '..rtp, url="t"}},
-{{text = 'رسائلك '..Msguser, url="t"}},
-{{text = 'ايديك '..msg.sender_user_id_, url="t"}}, 
-{{text = 'البايو '..getbio(msg.sender_user_id_), url="t"}}, 
+{{text = 'معرفك '..data.username_,url="t.me/S_E_M_O_E_L_K_B_E_R"}},
+{{text = 'رتبتك '..rtp, url="t.me/S_E_M_O_E_L_K_B_E_R"}},
+{{text = 'رسائلك '..Msguser, url="t.me/S_E_M_O_E_L_K_B_E_R"}},
+{{text = 'ايديك '..msg.sender_user_id_, url="t.me/ahmedyad200"}}, 
+{{text = 'البايو '..getbio(msg.sender_user_id_), url="t.me/ahmedyad200"}}, 
 }
 local function getpro(extra, result, success)
 if result.photos_[0] then
