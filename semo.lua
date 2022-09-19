@@ -7425,20 +7425,6 @@ end
 end
 end
 
-if text ==  ترجمه  or text ==  ترجمة  or text ==  ترجم  or text ==  translat  then 
-local reply_markup = LuaTele.replyMarkup{
-type =  inline ,
-data = {
-{{text =  ترجمه الي العربية , data = msg.sender.user_id.. toar },{text =  ترجمه الي الانجليزية , data = msg.sender.user_id.. toen }},
-{{text =  𝑺𝑶𝑼𝑹𝑪𝑬 𝑬𝑳𝑵𝑮𝑶𝑶𝑴 , url = "https://t.me/SSE_MO"}},
-}
-}
-return send(msg_chat_id,msg_id, [[*
-• Hey Send Text translate
-• ارسل النص لترجمته
-*]],"md",false, false, false, false, reply_markup)
-end
-
 -- bank
 if text ==  بنك  or text ==  البنك  then
 bot.sendText(msg.chat_id,msg.id,[[
