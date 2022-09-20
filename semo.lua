@@ -1201,21 +1201,21 @@ end
 
 if msg.content.luatele == "messageChatAddMembers" then -- اضافه اشخاص
 print('This is Add Membeers ')
-Redis:incr(semo.."Num:Add:Memp"..msg_chat_id..":"..msg.sender.user_id) 
-local AddMembrs = Redis:get(semo.."Lock:AddMempar"..msg_chat_id) 
-local Lock_Bots = Redis:get(semo.."Lock:Bot:kick"..msg_chat_id)
+Redis:incr(itssemo.."semo:Num:Add:Memp"..msg_chat_id..":"..msg.sender.user_id) 
+local AddMembrs = Redis:get(itssemo.."semo:Lock:AddMempar"..msg_chat_id) 
+local Lock_Bots = Redis:get(itssemo.."semo:Lock:Bot:kick"..msg_chat_id)
 for k,v in pairs(msg.content.member_user_ids) do
 local Info_User = LuaTele.getUser(v) 
 print(v)
-if v == tonumber(semo) then
-local N = (Redis:get(semo.."Name:Bot") or "النجوم")
-photo = LuaTele.getUserProfilePhotos(semo)
-local bot = '🍷ــــــــــــــــــــــــــــــــــــــــــــــــــــــ🍷\n🎤╖ أهلآ بك عزيزي اسمي '..N..'\n⚙️╢ وظيفتي حماية المجموعات🌐\n✅╢ لتفعيل البوت عليك اتباع مايلي\n🔘╢ أضِف البوت إلى مجموعتك\n⚡️╢ ارفعهُ » مشرف\n⬆️╜ سيتم ترقيتك مالك في البوت\n🍷ــــــــــــــــــــــــــــــــــــــــــــــــــــــ🍷\n'
+if v == tonumber(itssemo) then
+local N = (Redis:get(itssemo.."semo:Name:Bot") or "فرعون")
+photo = LuaTele.getUserProfilePhotos(itssemo)
+local bot = '◍ انا بوت اسمي '..N..'\n◍ وظيفتي حمايه الجروب من السبام والتفليش الخ\n◍ لتفعيل البوت قم اضافته للمجموعتك قم برفعه مشرف واكتب تفعيل\n'
 if photo.total_count > 0 then
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
+{text = 'أضف لبوت لمجموعتك ✅', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 }
 local msgg = msg_id/2097152/0.5
@@ -13657,42 +13657,55 @@ LuaTele.sendText(msg_chat_id,msg_id, "◍ تم تحديث الملفات ♻","m
 dofile('semo.lua')  
 end
 if text == '/start' then
-Redis:sadd(semo..'Num:User:Pv',msg.sender_id.user_id)  
-if not msg.Asasy then
+local photo = LuaTele.getUserProfilePhotos(semo)
+local ban = LuaTele.getUser(semo)
+local  bb = LuaTele.getUser(Sudo_Id) 
+local bain = LuaTele.getUser(msg.sender.user_id)
+Redis:sadd(semo..'Num:User:Pv',msg.sender.user_id)  
+if not msg.ControllerBot then
 if not Redis:get(semo.."Start:Bot") then
-local CmdStart = '*\n✠┊ أهلآ بك في بوت '..(Redis:get(semo.."Name:Bot") or "ليدر")..
-'\n✠┊ اختصاص البوت حماية المجموعات'..
-'\n✠┊ لتفعيل البوت عليك اتباع مايلي ...'..
-'\n✠┊ اضف البوت الى مجموعتك'..
-'\n✠┊ ارفعه ادمن {مشرف}'..
-'\n✠┊ ارسل كلمة { تفعيل } ليتم تفعيل الكروب'..
-'\n✠┊ مطور البوت ← {@'..UserSudo..'}*'
-local reply_markup = bot.replyMarkup{
-type = 'inline',
-data = {
+if bain.username then
+banusername = '[@'..bain.username..']'
+else
+banusername = 'لا يوجد'
+end
+if bain.first_name then
+baniusername = '*['..bain.first_name..'](tg://user?id='..bain.id..')*'
+else
+baniusername = 'لا يوجد'
+end
+local CmdStart = '*\n🍷ــــــــــــــــــــــــــــــــــــــــــــــــــــــ🍷\n🎤╖ اهلا بك عزيزي انا بوت '..(Redis:get(semo.."Name:Bot") or "النجوم")..
+'\n⚙️╢ وظيفتي حماية المجموعات'..
+'\n✅╢ لتفعيل البوت عليك اتباع مايلي ...'..
+'\n🔘╢ أضِف البوت إلى مجموعتك'..
+'\n⚡️╢ ارفعهُ » مشرف'..
+'\n⬆️╜ سيتم ترقيتك مالك في البوت '..
+'\n🍷ــــــــــــــــــــــــــــــــــــــــــــــــــــــ🍷 \n*'
+if photo.total_count > 0 then
+keyboard = {} 
+keyboard.inline_keyboard = {
 {
-{text = '⌯ اضفني لمجموعتك .', url = 't.me/'..UserBot..'?startgroup=new'}, 
+{text = '✗𝑬𝑳𝑵𝑮𝑶𝑶𝑴 𝑺𝑶𝑼𝑹𝑪𝑬✗', url = 't.me/SSE_MO'}, 
 },
 {
-{text = '⌯ لـتـنصيب بـوت .', url = 't.me/L_U_2'},
+{text = 'مطور البوت ⋆', url = "https://t.me/"..bb.username..""},
 },
 {
-{text = '• 𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥  •', url = 't.me/LEDARQ'}, 
+{text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
-}
 }
 local msgg = msg_id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo="..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id.."&caption=".. URL.escape(CmdStart).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
-LuaTele.sendText(Sudo_Id,0,'*\n\n◍ دخل شخص إلى البوت \n\n◍ اسمه : '..baniusername..' \n\n◍ ايديه : '..msg.sender.user_id..'\n\n◍ معرفه : '..banusername..'\n\n*',"md")
+LuaTele.sendText(Sudo_Id,0,'*\n⋆ دخل شخص إلى البوت \n⩹━✗𝑬𝑳𝑵𝑮𝑶𝑶𝑴 𝑺𝑶𝑼𝑹𝑪𝑬✗━⩺\n⋆ اسمه :- '..baniusername..' \n⋆ ايديه :-  : '..msg.sender.user_id..'\n⋆ - معرفة '..banusername..' \n*',"md")
 else
 local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '‹ قناه السورس ›', url = 't.me/G_php'}, 
+{text = '✗𝑬𝑳𝑵𝑮𝑶𝑶𝑴 𝑺𝑶𝑼𝑹𝑪𝑬✗', url = 't.me/SSE_MO'}, 
 },
 {
-{text = 'أضف لبوت لمجموعتك ✅', url = 't.me/'..UserBot..'?startgroup=new'}, 
+{text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 }
 }
