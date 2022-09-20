@@ -5720,7 +5720,7 @@ local msg_id = msg.id/2097152/0.5
 end
 end
 if text == 'احمد' or text == 'مبرمج السورس' or text == 'سيمو' then  
-local UserId_Info = LuaTele.searchPublicChat("F_php")
+local UserId_Info = LuaTele.searchPublicChat("WORLED_SEMO")
 if UserId_Info.id then
 local UserInfo = LuaTele.getUser(UserId_Info.id)
 local InfoUser = LuaTele.getUserFullInfo(UserId_Info.id)
@@ -5735,7 +5735,7 @@ local TestText = "⁕ معلومات المبرمج\n\n⁕ *الاسم* : ["..Us
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '⋮ Developer ⋮', url = "https://t.me/F_php"}
+{text = '⋮ Developer ⋮', url = "https://t.me/WORLED_SEMO"}
 },
 {
 {text = '⋮ Source semo ⋮', url = "https://t.me/SSE_MO"}
@@ -5748,7 +5748,7 @@ local TestText = "⁕ معلومات المبرمج\n\n⁕ *الاسم* : ["..Us
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '⋮ Developer ⋮', url = "https://t.me/F_php"}
+{text = '⋮ Developer ⋮', url = "https://t.me/WORLED_SEMO"}
 },
 {
 {text = '⋮ Source semo ⋮', url = "https://t.me/SSE_MO"},
@@ -5883,16 +5883,16 @@ if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or tex
 local Text =[[
 𝁂 Welcome To Source semo  ⋮ 
 
-𝁂 Files : [ Group ⋮](https://T_S_T1)
+𝁂 Files : [ Group ⋮](https://t.me/T_S_T1)
 
 𝁂 TwisL : [ Dev semo ⋮](https://t.me/S_E_M_O_E_L_K_B_E_R)
 
-𝁂 Channel : [ Team semo ⋮](https://t.m/SSE_O)
+𝁂 Channel : [ Team semo ⋮](https://t.me/SSE_O)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⋮ Developer ⋮', url = "https://t.me/S_E_M_O_E_L_K_B_E_R"},{text = '⋮ Developer ⋮', url = "https://t.me/F_php"}
+{text = '⋮ Developer ⋮', url = "https://t.me/S_E_M_O_E_L_K_B_E_R"},{text = '⋮ Developer ⋮', url = "https://t.me/WORLED_SEMO"}
 },
 {
 {text = '⋮ Source semo ⋮', url = "https://t.me/SSE_MO"}
