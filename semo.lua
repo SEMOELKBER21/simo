@@ -13657,38 +13657,29 @@ LuaTele.sendText(msg_chat_id,msg_id, "◍ تم تحديث الملفات ♻","m
 dofile('semo.lua')  
 end
 if text == '/start' then
-local photo = LuaTele.getUserProfilePhotos(itssemo)
-local ban = LuaTele.getUser(itssemo)
-local bain = LuaTele.getUser(msg.sender.user_id)
-Redis:sadd(itssemo..'Num:User:Pv',msg.sender.user_id)  
-if not msg.ControllerBot then
-if not Redis:get(itssemo.."Start:Bot") then
-if bain.username then
-banusername = '[@'..bain.username..']'
-else
-banusername = 'لا يوجد'
-end
-if bain.first_name then
-baniusername = '*['..bain.first_name..'](tg://user?id='..bain.id..')*'
-else
-baniusername = 'لا يوجد'
-end
-local CmdStart = '*\n◍ أهلآ بك في بوت '..(Redis:get(itssemo.."semo:Name:Bot") or "فرعون")..
-'\n◍ اختصاص البوت حماية المجموعات'..
-'\n◍ لتفعيل البوت عليك اتباع مايلي ...'..
-'\n◍ اضف البوت الى مجموعتك'..
-'\n◍ ارفعه ادمن {مشرف}'..
-'\n◍ ارسل كلمة { تفعيل } ليتم تفعيل الجروب'..
-'\n◍ مطور البوت {@'..UserSudo..'}*'
-if photo.total_count > 0 then
-keyboard = {} 
-keyboard.inline_keyboard = {
+Redis:sadd(semo..'Num:User:Pv',msg.sender_id.user_id)  
+if not msg.Asasy then
+if not Redis:get(semo.."Start:Bot") then
+local CmdStart = '*\n✠┊ أهلآ بك في بوت '..(Redis:get(semo.."Name:Bot") or "ليدر")..
+'\n✠┊ اختصاص البوت حماية المجموعات'..
+'\n✠┊ لتفعيل البوت عليك اتباع مايلي ...'..
+'\n✠┊ اضف البوت الى مجموعتك'..
+'\n✠┊ ارفعه ادمن {مشرف}'..
+'\n✠┊ ارسل كلمة { تفعيل } ليتم تفعيل الكروب'..
+'\n✠┊ مطور البوت ← {@'..UserSudo..'}*'
+local reply_markup = bot.replyMarkup{
+type = 'inline',
+data = {
 {
-{text = '‹ قناه السورس ›', url = 't.me/G_php'}, 
+{text = '⌯ اضفني لمجموعتك .', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = 'أضف لبوت لمجموعتك ✅', url = 't.me/'..UserBot..'?startgroup=new'}, 
+{text = '⌯ لـتـنصيب بـوت .', url = 't.me/L_U_2'},
 },
+{
+{text = '• 𝗦𝗢𝗨𝗥𝗖𝗘 𓅛𝗟𝗘𝗔𝗗𝗘𝗥  •', url = 't.me/LEDARQ'}, 
+},
+}
 }
 local msgg = msg_id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg_chat_id .. "&photo="..photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id.."&caption=".. URL.escape(CmdStart).."&reply_to_message_id="..msgg.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
