@@ -5719,26 +5719,24 @@ local msg_id = msg.id/2097152/0.5
  https.request("https://api.telegram.org/bot"..Token..'/sendMessage?chat_id=' .. msg.chat_id .. '&text=' .. URL.escape(TestText).."&reply_to_message_id="..msg_id.."&parse_mode=markdown")
 end
 end
-if text == 'احمد' or text == 'مبرمج السورس' or text == 'سيمو' then  
-local UserId_Info = LuaTele.searchPublicChat("WORLED_SEMO")
+
+if text == 'المبرمج سيمو' or text == 'سيمو' then  
+local UserId_Info = LuaTele.searchPublicChat("S_E_M_O_E_L_K_B_E_R")
 if UserId_Info.id then
-local UserInfo = LuaTele.getUser(UserId_Info.id)
-local InfoUser = LuaTele.getUserFullInfo(UserId_Info.id)
-if InfoUser.bio then
-Bio = InfoUser.bio
+local  ban = LuaTele.getUser(UserId_Info.id)
+local  bain = LuaTele.getUserFullInfo(Sudo_Id)
+if  bain.bio then
+Bio =  bain.bio
 else
 Bio = 'لا يوجد'
 end
 local photo = LuaTele.getUserProfilePhotos(UserId_Info.id)
 if photo.total_count > 0 then
-local TestText = "⁕ معلومات المبرمج\n\n⁕ *الاسم* : ["..UserInfo.first_name.."](tg://user?id="..UserId_Info.id..")\n\n⁕ *البايو* : ["..Bio.."]"
+local TestText = "  ❲ «𝑬𝑳𝑵𝑮𝑶𝑶𝑴-𝑺𝑶𝑼𝑹𝑪𝑬» ❳\n— — — — — — — — —\n ⋆*Dev Name* :  [".. ban.first_name.."](tg://user?id="..UserId_Info.id..")\n⋆ *Dev Bio* : [❲ "..Bio.." ❳]"
 keyboardd = {} 
 keyboardd.inline_keyboard = {
 {
-{text = '⋮ Developer ⋮', url = "https://t.me/WORLED_SEMO"}
-},
-{
-{text = '⋮ Source semo ⋮', url = "https://t.me/SSE_MO"}
+{text = '< Developers semo  >', url = "https://t.me/S_E_M_O_E_L_K_B_E_R"}
 },
 }
 local msg_id = msg.id/2097152/0.5 
