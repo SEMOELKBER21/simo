@@ -1201,21 +1201,21 @@ end
 
 if msg.content.luatele == "messageChatAddMembers" then -- اضافه اشخاص
 print('This is Add Membeers ')
-Redis:incr(itssemo.."semo:Num:Add:Memp"..msg_chat_id..":"..msg.sender.user_id) 
-local AddMembrs = Redis:get(itssemo.."semo:Lock:AddMempar"..msg_chat_id) 
-local Lock_Bots = Redis:get(itssemo.."semo:Lock:Bot:kick"..msg_chat_id)
+Redis:incr(semo.."Num:Add:Memp"..msg_chat_id..":"..msg.sender.user_id) 
+local AddMembrs = Redis:get(semo.."Lock:AddMempar"..msg_chat_id) 
+local Lock_Bots = Redis:get(semo.."Lock:Bot:kick"..msg_chat_id)
 for k,v in pairs(msg.content.member_user_ids) do
 local Info_User = LuaTele.getUser(v) 
 print(v)
-if v == tonumber(itssemo) then
-local N = (Redis:get(itssemo.."semo:Name:Bot") or "فرعون")
-photo = LuaTele.getUserProfilePhotos(itssemo)
-local bot = '◍ انا بوت اسمي '..N..'\n◍ وظيفتي حمايه الجروب من السبام والتفليش الخ\n◍ لتفعيل البوت قم اضافته للمجموعتك قم برفعه مشرف واكتب تفعيل\n'
+if v == tonumber(semo) then
+local N = (Redis:get(semo.."Name:Bot") or "النجوم")
+photo = LuaTele.getUserProfilePhotos(semo)
+local bot = '🍷ــــــــــــــــــــــــــــــــــــــــــــــــــــــ🍷\n🎤╖ أهلآ بك عزيزي اسمي '..N..'\n⚙️╢ وظيفتي حماية المجموعات🌐\n✅╢ لتفعيل البوت عليك اتباع مايلي\n🔘╢ أضِف البوت إلى مجموعتك\n⚡️╢ ارفعهُ » مشرف\n⬆️╜ سيتم ترقيتك مالك في البوت\n🍷ــــــــــــــــــــــــــــــــــــــــــــــــــــــ🍷\n'
 if photo.total_count > 0 then
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'أضف لبوت لمجموعتك ✅', url = 't.me/'..UserBot..'?startgroup=new'}, 
+{text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 }
 local msgg = msg_id/2097152/0.5
