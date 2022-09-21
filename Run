@@ -1,7 +1,7 @@
 #!/bin/bash
 cd $(cd $(dirname $0); pwd)
 echo -e '\e[1m\e[31m
-يتم تنصيب سورس تلي جود الان, 
+يتم تنصيب سورس النجوم الان, 
 برجاء الانتظار حتي يتم انتهاء التنصيب
 \033[0m'
 echo -e '\033[0;33m
@@ -13,7 +13,7 @@ or اذا سبق ونصبت السورس ارسل رقم » {2}
 read Install
 case $Install in
 1)
-echo -e '\033[0;33mيتم تنصيب مكاتب سورس تلي جود الان'
+echo -e '\033[0;33mيتم تنصيب مكاتب سورس النجوم الان'
 sleep 2
 sudo apt update
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test
@@ -45,12 +45,12 @@ sudo luarocks install luasocket
 cd ../..
 rm -rf tmp
 unzip luatele.zip
-sudo lua5.3 TeleGod.lua
+sudo lua5.3 semo.lua
 ;;
 2)
 echo -e "\e[1m\e[32mThe bot is running now : جاري تشغيل البوت الان : \e[0m"
 sleep 2
 unzip luatele.zip
-sudo lua5.3 TeleGod.lua
+sudo lua5.3 semo.lua
 ;;
 esac
