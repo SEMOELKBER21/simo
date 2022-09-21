@@ -1028,7 +1028,7 @@ end
 end
 
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
-video = "https://t.me/WORLED_SEMO/160"
+Pphoto = "https://t.me/WORLED_SEMO/160"
 local T =[[
 The besT sourCe on TeLeGrAm
 ]]
