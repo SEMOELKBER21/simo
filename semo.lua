@@ -5491,10 +5491,10 @@ end
 if text and text:match("^all (.*)$") or text:match("^@all (.*)$") or text == "@all" or text == "all" then 
 local ttag = text:match("^all (.*)$") or text:match("^@all (.*)$") 
 if not msg.Managers then
-return LuaTele.sendText(msg_chat_id,msg_id,'\n*⁕ هاذا الامر يخص⦗ '..Controller_Num(6)..' ⦘* ',"md",true)  
+return LuaTele.sendText(msg_chat_id,msg_id,'\n*⋆ هاذا الامر يخص⦗ '..Controller_Num(6)..' ⦘* ',"md",true)  
 end
-if Redis:get(itssemo.."lockalllll"..msg_chat_id) == "off" then
-return LuaTele.sendText(msg_chat_id,msg_id,'*⁕  تم تعطيل @all من قبل المدراء*',"md",true)  
+if Redis:get(semo.."lockalllll"..msg_chat_id) == "off" then
+return LuaTele.sendText(msg_chat_id,msg_id,'*⋆  تم تعطيل @all من قبل المدراء*',"md",true)  
 end
 local Info_Members = LuaTele.searchChatMembers(msg_chat_id, "*", 2000)
 x = 0 
@@ -5514,7 +5514,7 @@ x = x + 1
 tagname = data.first_name
 tagname = tagname:gsub("]","") 
 tagname = tagname:gsub("[[]","") 
-t = t..", ["..tagname.."](tg://user?id="..v.member_id.user_id..")" 
+t = t.."⤻ ["..tagname.."](tg://user?id="..v.member_id.user_id..")" 
 if x == 20 or x == tags or k == 0 then 
 if ttag then
 Text = t:gsub('#all '..ttag..',','#all '..ttag..'\n') 
@@ -5530,7 +5530,7 @@ local c = msg.content.caption.text
 return LuaTele.sendText(msg_chat_id,msg_id,c,"md",true)  
 end
 if msg.content.photo or msg.content.animation or msg.content.sticker or msg.content.video or msg.content.audio or msg.content.document or msg.content.voice_chats then
-Redis:sadd(itssemo.."cleaner"..msg_chat_id,msg_id)
+Redis:sadd(semo.."cleaner"..msg_chat_id,msg_id)
 end
 
 if text == 'بيقول اي' or text == "قال اي" or text == "يقول اي" or text == "وش يقول" then  
