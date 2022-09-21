@@ -5879,13 +5879,13 @@ return LuaTele.sendText(msg_chat_id,msg_id, '⁕ تم التغيير ارسل ا
 end
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
 local Text =[[
-𝁂 Welcome To Source semo  ⋮ 
+𝁂 Welcome To Source ElnGoOm ⋮ 
 
 𝁂 Files : [ Group ⋮](https://t.me/T_S_T1)
 
-𝁂 TwisL : [ Dev semo ⋮](https://t.me/S_E_M_O_E_L_K_B_E_R)
+𝁂 TwisL : [ Dev SeMo ⋮](https://t.me/S_E_M_O_E_L_K_B_E_R)
 
-𝁂 Channel : [ Team semo ⋮](https://t.me/SSE_O)
+𝁂 Channel : [ Team ElNgOoM ⋮](https://t.me/SSE_O)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -5893,7 +5893,7 @@ keyboard.inline_keyboard = {
 {text = '⋮ Developer ⋮', url = "https://t.me/S_E_M_O_E_L_K_B_E_R"},{text = '⋮ Developer ⋮', url = "https://t.me/WORLED_SEMO"}
 },
 {
-{text = '⋮ Source semo ⋮', url = "https://t.me/SSE_MO"}
+{text = '⋮ Source ElnGoOm ⋮', url = "https://t.me/SSE_MO"}
 },
 }
 local msg_id = msg.id/2097152/0.5
