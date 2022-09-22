@@ -1,8 +1,8 @@
 #!/bin/bash
 cd $(cd $(dirname $0); pwd)
 echo -e '\e[1m\e[31m
-يتم تنصيب سورس النجوم الان, 
-برجاء الانتظار حتي يتم انتهاء التنصيب
+Smsm source is being installed, 
+Please wait until the installation is complete
 \033[0m'
 echo -e '\033[0;33m
 If it is the first time to install the source, send the number » {1}
@@ -13,7 +13,7 @@ or اذا سبق ونصبت السورس ارسل رقم » {2}
 read Install
 case $Install in
 1)
-echo -e '\033[0;33mيتم تنصيب مكاتب سورس النجوم الان'
+echo -e '\033[0;33mOffice installation has begun'
 sleep 2
 sudo apt update
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test
@@ -39,12 +39,11 @@ wget https://luarocks.org/releases/luarocks-3.3.0.tar.gz --no-check-certificate
 tar zxpf luarocks-3.3.0.tar.gz
 cd luarocks-3.3.0
 ./configure && make && sudo make install
-sudo luarocks install luarocks
-sudo luarocks install luasec
-sudo luarocks install luasocket
+ luarocks install luarocks
+ luarocks install luasec
+ luarocks install luasocket
 cd ../..
 rm -rf tmp
-unzip luatele.zip
 sudo lua5.3 semo.lua
 ;;
 2)
