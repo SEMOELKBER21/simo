@@ -1060,79 +1060,59 @@ end
 end 
 return JoinChannel
 end
-function File_Bot_Run(msg,data)  
-local msg_chat_id = msg.chat_id
-local msg_reply_id = msg.reply_to_message_id
-local msg_id = msg.id
---
---
-
-Redis:incr(semo..'Num:Message:User'..msg.chat_id..':'..msg.sender_id.user_id) 
-if msg.date and msg.date < tonumber(os.time() - 15) then
-print("->> Old Message End <<-")
-return false
-end
 
 if data.content.text then
 text = data.content.text.text
 else
 text = nil
 end
-
-if Statusrestricted(msg.chat_id,msg.sender_id.user_id).BanAll == true then
-return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id}),LuaTele.setChatMemberStatus(msg.chat_id,msg.sender_id.user_id,'banned',0)
-elseif Statusrestricted(msg.chat_id,msg.sender_id.user_id).ktmall == true then
-return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id})
-elseif Statusrestricted(msg.chat_id,msg.sender_id.user_id).BanGroup == true then
-return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id}),LuaTele.setChatMemberStatus(msg.chat_id,msg.sender_id.user_id,'banned',0)
-elseif Statusrestricted(msg.chat_id,msg.sender_id.user_id).SilentGroup == true then
-return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id})
-end
-if tonumber(msg.sender_id.user_id) == 1965297568 then
-msg.Name_Controller = 'المبرمج جاك '
-msg.The_Controller = 1
-elseif tonumber(msg.sender_id.user_id) == 5298947457 then
-msg.Name_Controller = 'مطور السورس '
-msg.The_Controller = 1
-elseif The_ControllerAll(msg.sender_id.user_id) == true then  
-msg.The_Controller = 1
-msg.Name_Controller = 'المطور الاساسي '
-elseif Redis:sismember(semo.."Thanway:Groups",msg.sender_id.user_id) == true then
-msg.The_Controller = 2
-msg.Name_Controller = 'المطور الثانوي'
-elseif Redis:sismember(semo.."Dev:Groups",msg.sender_id.user_id) == true then
-msg.The_Controller = 3
-msg.Name_Controller = Redis:get(semo.."Developer:Bot:Reply"..msg.chat_id) or 'المطور '
-elseif Redis:sismember(semo.."Owners:Group"..msg.chat_id,msg.sender_id.user_id) == true then
-msg.The_Controller = 44
-msg.Name_Controller = Redis:get(semo.."PresidentQ:Group:Reply"..msg.chat_id) or 'المالك'
-elseif Redis:sismember(semo.."Supcreator:Group"..msg.chat_id,msg.sender_id.user_id) == true then
-msg.The_Controller = 4
-msg.Name_Controller = Redis:get(semo.."President:Group:Reply"..msg.chat_id) or 'المنشئ الاساسي'
-elseif Redis:sismember(semo.."Creator:Group"..msg.chat_id,msg.sender_id.user_id) == true then
-msg.The_Controller = 5
-msg.Name_Controller = Redis:get(semo.."Constructor:Group:Reply"..msg.chat_id) or 'المنشئ '
-elseif Redis:sismember(semo.."Manger:Group"..msg.chat_id,msg.sender_id.user_id) == true then
-msg.The_Controller = 6
-msg.Name_Controller = Redis:get(semo.."Manager:Group:Reply"..msg.chat_id) or 'المدير '
-elseif Redis:sismember(semo.."Admin:Group"..msg.chat_id,msg.sender_id.user_id) == true then
-msg.The_Controller = 7
-msg.Name_Controller = Redis:get(semo.."Admin:Group:Reply"..msg.chat_id) or 'الادمن '
-elseif Redis:sismember(semo.."Special:Group"..msg.chat_id,msg.sender_id.user_id) == true then
-msg.The_Controller = 8
-msg.Name_Controller = Redis:get(semo.."Vip:Group:Reply"..msg.chat_id) or 'المميز '
-elseif tonumber(msg.sender_id.user_id) == tonumber(semo) then
-msg.The_Controller = 9
+Status = 0
+Developers = Redis:sismember(itssemo.."semo:Developers:Groups",UserId) 
+DevelopersQ = Redis:sismember(itssemo.."semo:DevelopersQ:Groups",UserId) 
+TheBasics = Redis:sismember(itssemo.."semo:TheBasics:Group"..ChatId,UserId)
+TheBasicsQ = Redis:sismember(itssemo.."semo:TheBasicsQ:Group"..ChatId,UserId) 
+Originators = Redis:sismember(itssemo.."semo:Originators:Group"..ChatId,UserId)
+Managers = Redis:sismember(itssemo.."semo:Managers:Group"..ChatId,UserId)
+Addictive = Redis:sismember(itssemo.."semo:Addictive:Group"..ChatId,UserId)
+Distinguished = Redis:sismember(itssemo.."semo:Distinguished:Group"..ChatId,UserId)
+StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
+if UserId == 5183920797 then
+Status = 'مبرمج السورس'
+elseif UserId == 5241548 then
+Status = 'مبرمج السورس'
+elseif UserId == 52415480 then
+Status = 'مطور السورس'
+elseif UserId == 53609 then
+Status = 'مطور السورس'
+elseif UserId == Sudo_Id then  
+Status = 'المطور الاساسي'
+elseif UserId == itssemo then
+Status = 'البوت'
+elseif DevelopersQ then
+Status = 'المطور الثانوي'
+elseif Developers then
+Status = Redis:get(itssemo.."semo:Developer:Bot:Reply"..ChatId) or 'المطور'
+elseif TheBasicsQ then
+Status = Redis:get(itssemo.."semo:PresidentQ:Group:Reply"..ChatId) or 'المالك'
+elseif TheBasics then
+Status = Redis:get(itssemo.."semo:President:Group:Reply"..ChatId) or 'المنشئ الاساسي'
+elseif Originators then
+Status = Redis:get(itssemo.."semo:Constructor:Group:Reply"..ChatId) or 'المنشئ'
+elseif Managers then
+Status = Redis:get(itssemo.."semo:Manager:Group:Reply"..ChatId) or 'المدير'
+elseif Addictive then
+Status = Redis:get(itssemo.."semo:Admin:Group:Reply"..ChatId) or 'الادمن'
+elseif StatusMember == "chatMemberStatusCreator" then
+Status = 'مالك المجموعه'
+elseif StatusMember == "chatMemberStatusAdministrator" then
+Status = 'ادمن المجموعه'
+elseif Distinguished then
+Status = Redis:get(itssemo.."semo:Vip:Group:Reply"..ChatId) or 'المميز'
 else
-msg.The_Controller = 10
-msg.Name_Controller = Redis:get(semo.."Mempar:Group:Reply"..msg.chat_id) or 'العضو '
+Status = Redis:get(itssemo.."semo:Mempar:Group:Reply"..ChatId) or 'العضو'
 end  
-if msg.The_Controller == 1 then  
-msg.ControllerBot = true
-end
-if msg.The_Controller == 1 or msg.The_Controller == 2 then
-msg.Thanway = true
-end
+return Status
+end 
 if msg.The_Controller == 1 or msg.The_Controller == 2 or msg.The_Controller == 3 then
 msg.Dev = true
 end
