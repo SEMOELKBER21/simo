@@ -1066,22 +1066,7 @@ local msg_reply_id = msg.reply_to_message_id
 local msg_id = msg.id
 --
 --
-if tonumber(msg.sender_id.user_id) == tonumber(semo) then
-print('This is reply for Bot')
-return false
-end
 
-if data.sender_id.luatele == "messageSenderChat" then
-if Redis:get(semo.."Lock:channell"..msg_chat_id) then
-local m = Redis:get(semo.."chadmin"..msg_chat_id) 
-if data.sender_id.chat_id == tonumber(m) then
-return false
-else
-return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id})
-end
-end
-return false 
-end
 Redis:incr(semo..'Num:Message:User'..msg.chat_id..':'..msg.sender_id.user_id) 
 if msg.date and msg.date < tonumber(os.time() - 15) then
 print("->> Old Message End <<-")
