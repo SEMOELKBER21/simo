@@ -1063,7 +1063,6 @@ end
 function File_Bot_Run(msg,data)  
 local msg_chat_id = msg.chat_id
 local msg_reply_id = msg.reply_to_message_id
-local msg_user_send_id = msg.sender_id.user_id
 local msg_id = msg.id
 --
 --
