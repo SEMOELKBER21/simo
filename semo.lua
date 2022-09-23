@@ -17782,18 +17782,6 @@ end
 if tonumber(data.message.sender_id.user_id) == tonumber(semo) then
 return false
 end
-if data.message.content.luatele == "messageChatJoinByLink" and Redis:get(semo..'Status:joinet'..data.message.chat_id) == 'true' then
-    local reply_markup = LuaTele.replyMarkup{
-    type = 'inline',
-    data = {
-    {
-    {text = ' انا لست بوت ', data = data.message.sender_id.user_id..'/UnKed'},
-    },
-    }
-    } 
-    LuaTele.setChatMemberStatus(data.message.chat_id,data.message.sender_id.user_id,'restricted',{1,0,0,0,0,0,0,0,0})
-    return send(data.message.chat_id, data.message.id, '❍ عليك اختيار انا لست بوت لتخطي نظام التحقق', 'md',false, false, false, false, reply_markup)
-    end
 File_Bot_Run(data.message,data.message)
 elseif data and data.luatele and data.luatele == "updateMessageEdited" then
 -- data.chat_id -- data.message_id
